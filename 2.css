@@ -1,0 +1,164 @@
+/****FOr Desktop View***/
+html, body{
+    height: 110vh;
+    width: 100%;
+    background-color: aquamarine;
+    margin: 0%;
+    padding: 0%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f4f7f5; 
+    color: #4b4c4b;
+}
+#bodycontainer{
+    height: 100vh;
+    width: 100%;
+    background-color: #f4f7f5; 
+    margin: 0%;
+    padding: 0%;
+    display: block;
+}
+/****nav***/
+#navigator{
+    height: 7vh;
+    width: 100%;
+    background-color: #54685d;
+    display: flex;
+    color: azure;
+}
+
+#form{
+    margin-left: 45%;
+    margin-top:1%;
+    width: 30%;
+}
+h1{
+    margin-left: 10%;
+}
+#input_login{
+    padding-left: 2%;
+}
+
+
+
+/****content****/
+#content{
+width: 100%;
+height: 80vh;
+display: inline-flex;
+}
+
+#image{
+    
+    width: 35%;
+    height: 80vh;
+    background-image: url("images/computer.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 12%;
+}
+#signup_form{
+    margin: 3%;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+/**create an account**/
+#ca{
+ width: 100%;
+ font-size: xx-large;
+}
+.sign_input{
+    display: block;
+    padding: 3%;
+    border-radius: 1%;
+    margin: 5%;
+    width: 150%;
+    border: 1px solid #54685d;
+}
+#sign_button{
+    display: block;
+    padding: 3%;
+    border-radius: 1%;
+    margin: 5%;
+    width: 156%;
+    border: 1px solid #54685d;
+    background: transparent;
+    border: 1px solid #54685d;
+}
+#sign_button:hover{
+    background: #54685d;
+    color: white;
+}
+
+
+
+
+
+/***footer***/
+#footer{
+    height: 22.5vh;
+    width: 100%;
+    border-top: 1.5px solid #54685d;
+}
+
+/******* For Mobile*******/
+@media only screen and (max-width: 600px) {
+html, body{
+    height: 100vh;
+    width: 100%;
+    background-color: aquamarine;
+    margin: 0%;
+    padding: 0%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f4f7f5; 
+    color: #4b4c4b;
+}
+#bodycontainer{
+    height: 100vh;
+    width: 100%;
+    background-color: #f4f7f5; 
+    margin: 0%;
+    padding: 0%;
+    display: block;
+}
+/****nav*******/
+#navigator{
+    height: 45vh;
+    width: 100%;
+    background-color: #54685d;
+    display: block;
+    color: azure;
+    text-align: center;
+}
+
+#form{
+    margin:0;
+    padding-top: 10%;
+}
+h1{
+    margin: 0;
+    padding-top: 4%;
+}
+#input_login{
+    padding: 15%;
+    margin-top: 10%;
+    width: 250%;
+    margin-left:30%;
+}
+.input_button{
+    padding: 10%;
+    margin-top: 10%;
+    width: 275%;
+    margin-left:30%;
+
+}
+#content{
+    display: block;
+}
+#image, .image{
+   
+    background-color: red;
+    
+}
+}

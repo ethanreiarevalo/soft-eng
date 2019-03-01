@@ -1,0 +1,282 @@
+/*************************For Desktop*************************/
+html,body{
+    height: 220vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f4f7f5; 
+    color: #4b4c4b;
+}
+.block{
+    height: 100vh;
+    width: 100%;
+    display: block;
+}
+/********header*********/
+#header{
+    height: 55vh;
+    width: 100%;
+    box-shadow: 0px 10px 18px -7px rgba(145,143,145,1);
+    background-image: url("images/samuel-zeller-118195-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+#logocont{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+}
+
+#logo{
+     
+    background-image: url("logo/logo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 200px;
+    width: 200px;
+    margin-bottom: 1%;
+    padding: 0;
+  }
+#sysname{
+    position: relative;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    top: 50vh;
+    color: black;
+    width: 100%;
+    
+}
+li{
+    display: inline;
+    margin:1%;   
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ul a:hover{
+    color: white;
+}
+/********about*********/
+#about{
+    height:75vh;
+    width: 100%;
+    background-color: #f4f7f5; 
+}
+#aboutp{
+    
+    padding: 0;
+    padding: 5%;
+    
+    
+}
+
+
+#img{
+    float: left;
+    background-image: url("images/e-tinda01.png");
+    width: 40%;
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 13.5vh; 
+    margin-left: 5%;
+    margin-right: 5%; 
+    
+}
+/****feature******/
+#feature{
+
+   height: 85vh;
+   width: 100%;
+   background-color: #39473f;
+   display: flex;
+   color: azure;
+}
+#f1{
+    
+    width: 33.3%;
+    height: 85vh;
+    
+}
+
+#f2{
+    
+    width: 33.4%;
+    height: 85vh; 
+}
+#f3{
+    
+    width: 33.3%;
+    height: 85vh; 
+}
+.image{
+    width:250px; 
+    height:250px; 
+    border-radius:50%; 
+    margin-top:8%;
+    
+}
+
+/****footer*******/
+
+#footer{
+    height: 20vh;
+    width: 100%;
+    background-color: #404142;
+    border-top: 1px solid #f4f7f5;
+    color: azure;
+}
+
+
+/*****navigation***/
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #54685d;
+    color: white;
+    padding: 1%;
+  }
+  
+  
+
+/*************************For Mobile*************************/
+@media only screen and (max-width: 600px) {
+    html,body{
+        height: 395vh;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    /********header*********/
+    #header{
+        height: 35vh;
+        width: 100%;
+        box-shadow: 0px 10px 18px -7px rgba(145,143,145,1);
+        background-image: url("images/samuel-zeller-118195-unsplash.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #logocont{
+        width: 100%;
+        height: 22vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    
+    }
+
+    #logo{
+     
+        background-image: url("logo/logo.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100px;
+        width: 100px;
+        margin-bottom: 1%;
+        padding: 0;
+    }
+    h2{
+        margin-bottom: 0;
+    }
+    
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        top: 30vh;
+        color: white;
+        
+    }
+    li{
+        display: inline-block;
+        margin:1%; 
+        color: white;  
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+/********about*********/
+    #about{
+       display: block;
+       height: 85vh;
+    }
+    #aboutp{
+        margin: 2%;
+        text-align: center;
+        
+    }
+
+    #img{
+        width: 70%;
+        background-size: contain;
+        height: 30vh;
+        display:block;
+        float: none;
+        margin: auto auto;
+        margin-top: 10%;
+
+    }
+/*****feature****/
+#feature{
+    height: 255vh;
+    width: 100%;
+    background-color: #39473f;
+    display: inline-block;
+ }
+ #f1{
+     
+     width: 100%;
+     height: 85vh;
+       
+ }
+ #f2{
+     
+     width: 100%;
+     height: 85vh; 
+ }
+ #f3{
+     
+     width: 100%;
+     height: 85vh; 
+ }
+
+ .image{
+    width:180px; 
+    height:180px; 
+    border-radius:50%; 
+    margin-top:10%;
+}
+/****footer*****/
+#footer .footer{
+    
+    background-color: #404142;
+    
+}
+
+/*****navigation****/
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #54685d;
+        color: white;
+    }
+}
