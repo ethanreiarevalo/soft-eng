@@ -1,0 +1,70 @@
+html body{
+    margin:0;
+    padding:0;
+    height: 100vh;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#bodycontainer{
+    margin:0;
+    padding:0;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+#side{
+    
+    display: grid;
+    grid-template-rows: 25vh 25vh 50vh;
+}
+#header{
+    background-color: coral;
+}
+#sideform{
+    margin-top: 5%;
+    display: block;
+}
+#inputside{
+    padding:2%;
+    margin: 2%;
+    width: 60%;
+    display: block;
+}
+
+#content{
+    
+    display: grid;
+    grid-template-rows: 90vh 10vh;
+}
+#main{
+   
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+#poscontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#pos{
+    height: 82vh;
+    width: 89%;
+    border:1px solid black;
+    display: grid;
+}
+#mainpos{
+    height:67vh;
+}
+#posbuttons{
+    border:1px solid blue;
+    height: 15vh;
+}
+#table{
+    background-color: aqua;
+}
+#buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

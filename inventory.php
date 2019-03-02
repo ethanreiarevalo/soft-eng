@@ -1,3 +1,25 @@
+<?php
+$user = 'root';
+$pass = '';
+$db = 'e_tinda';
+
+$db = mysqli_connect('localhost', $user, $pass, $db) or die("Unable to connect");
+
+$sql = "select studentnum,name,course,year from student";
+$result = $db->query($sql);
+
+
+
+if($result->num_rows >0){
+    while($row = $result->fetch_assoc()){
+       echo '<tr><td><center>' .$row["studentnum"]. '</center></td>';
+       echo '<td><center>' .$row["name"]. '</center></td>';
+       echo '<td><center>' .$row["course"]. '</center></td>';
+       echo '<td><center>' .$row["year"]. '</center></td>';
+       echo '<td><center> EDIT | DELETE </center></td></tr>';
+    }
+}
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -23,16 +45,20 @@
             </div>
             <div id="TableInventory">
                 <center>
+                    <form action="" method="post">
                     <label>ITEM NAME</label><br>
-                    <input type="text" id="ItemName" value="Uneditable"/><br><br>
+                    <input type="text" id="ItemName" value="Uneditable" name="itemname"/><br><br>
                     <label>NUMBER IN STOCK</label><br>
-                    <input type="text" id="NumberInStock" value="Uneditable"/><br><br>
+                    <input type="text" id="NumberInStock" value="Uneditable" name="numberinstock"/><br><br>
                     <label>CAPITAL</label><br>
-                    <input type="text" id="CapitalBox" value="Enter Text"/><br><br>
+                    <input type="text" id="CapitalBox" value="Enter Text" name="capital"/><br><br>
                     <label>SELLING PRICE </label><br>
-                    <input type="text" id="SellingPriceBox" value="Enter Text"/><br><br>
+                    <input type="text" id="SellingPriceBox" value="Enter Text" name="sellingprice"/><br><br>
                     <label>DATE MODIFIED</label><br>
-                    <input type="text" id="DateModified" value="Uneditable"/><br><br>
+                    <input type="text" id="DateModified" value="Uneditable" name="datemodified"/><br><br>
+                    <button type="submit" value="Insert">ADD</button>
+                    </form>
+                    
                 </center>
             </div>
         </div>
@@ -50,7 +76,8 @@
                         <th>Capital</th>
                         <th>Selling Price</th>
                         <th>Date Modified</th>
-                        <th>Delete</th>
+                        <th>Add Stock</th>
+                        <th>Update Item</th>
                     </tr>
                     <tr>
                         <td>Catsup</td>
@@ -58,7 +85,8 @@
                         <td>18.75</td>
                         <td>20.00</td>
                         <td><center>2-23-2019</center></td>
-                        <td><center><button>delete</button></center></td>
+                        <td><center><button>ADD</button></center></td>
+                        <td><center><button>UPDATE</button></center></td>
                     </tr>
                     <tr>
                         <td>Shampoo</td>
@@ -66,7 +94,8 @@
                         <td>5.50</td>
                         <td>6.00</td>
                         <td><center>2-23-2019</center></td>
-                        <td><center><button>delete</button></center></td>
+                        <td><center><button>ADD</button></center></td>
+                        <td><center><button>UPDATE</button></center></td>
                     </tr>
                     <tr>
                         <td>Eggs</td>
@@ -74,17 +103,15 @@
                         <td>6.00</td>
                         <td>6.50</td>
                         <td><center>2-23-2019</center></td>
-                        <td><center><button>delete</button></center></td>
+                        <td><center><button>ADD</button></center></td>
+                        <td><center><button>UPDATE</button></center></td>
                     </tr>
                 </table>
             </div>
             <div id="selections">
-                <div id="InventoryOptions">
-                    <input type="button" class="button" value="ADD">
-                    <input type="button" class="update" value="UPDATE">
-                </div>
+                
                 <div id="PageOptions">
-                    <input type="button" class="pos" value="POS">
+                    <input type="button" class="pos" value="POS" onclick="location.href='pos.php';">
                     <input type="button" class="reports" value="REPORTS">
                 </div>
             </div>

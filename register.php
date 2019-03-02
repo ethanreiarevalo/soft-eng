@@ -1,23 +1,41 @@
 <?php
-$user = 'root';
-$pass = '';
-$db = 'e_tinda';
+session_start();
+$conn_error = 'could not connect';
+$username =$_POST['username'];
+$pass = $_POST['password'];
+$email = $_POST['email'];
+$storename =$_POST['store_name'];
+$fname =$_POST['first_name'];
+$lname =$_POST['last_name'];
+$mysql_host = 'localhost';
+$mysql_user = 'root';
+$mysql_pass = '';
+$mysql_db = 'e_tinda';
+$con = mysqli_connect($mysql_host, $mysql_user, $mysql_pass, "e_tinda") ;
+$result = $con->query("INSERT INTO `t_account` VALUES ('$username','$email','$storename','$pass',
+'$fname','$lname')");
 
-$db = new mysqli('localhost', $user, $pass, $db) or die("Unable to connect");
+$sql = "CREATE TABLE if not exists $storename (
+  id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+  itemName VARCHAR(30) NOT NULL,
+  stock int(10) NOT NULL,
+  capital float(10),
+  sellingPrice float(10),
+  dateModified DATE
+  )";
+  
+  if ($con->query($sql) === TRUE) {
+    $_SESSION['username'] = $username;
+    $_SESSION['password'] = $pass;
+    $_SESSION['store_name'] = $storename;
+    $_SESSION['first_name'] = $fname;
+    $_SESSION['last_name'] = $lname;
+    $_SESSION['email'] = $email;
+      header("location: account.php");
+  } else {
+      echo "Error creating table: " . $con->error;
+  }
 
-$Username = $_POST['username'];
-$Email = $_POST['email'];
-$Storename = $_POST['store_name'];
-$Password = $_POST['password'];
-$Fn = $_POST['first_name'];
-$Ln = $_POST['last_name'];
+mysqli_close($con);
 
-$sql = "insert into t_account(username,email, store_name, password, first_name, last_name) values('$Username','$Email', '$Storename', '$Password', '$Fn', '$Ln')";
-
-if(!mysqli_query($db, $sql)){
-    echo"Not Inserted! Please wait a second...";
-}else{
-    echo"Data Inserted! Please wait a second...";
-}
-header("location:inventory.php");
 ?>
