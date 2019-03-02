@@ -113,6 +113,7 @@ li{
 }
 a{
     text-decoration: none;
+    color: white;
 }
 #report{
     border: 1px solid black;
