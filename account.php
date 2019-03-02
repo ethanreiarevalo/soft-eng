@@ -63,7 +63,7 @@ $lname = $_SESSION['last_name'];
                     </div>
                     
                     <div id="edit">
-                        <form action="accountUpdate.php" method="post" >
+                        <form action="accountUpdate.php" method="post" id = "form_">
                             <center><h4>Edit Profile</h4></center>
                             <?php $_SESSION['storename'] = $storename;?>
                             <input type="text" placeholder="Change Username" name="userName">
