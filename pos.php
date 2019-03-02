@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+$username = $_SESSION['username'];
+$password = $_SESSION['password'];
+$storename = $_SESSION['store_name'];
+$email=$_SESSION['email'];
+$fname=$_SESSION['first_name'];
+$lname=$_SESSION['last_name'];
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,7 +50,39 @@
 
         <div id="content">
             <div id="main">
-                <div id="table"></div>
+                <div id="table">
+                <table>
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Stock</th> 
+                        <th>Capital</th>
+                        <th>Selling Price</th>
+                        <th>Date Modified</th>
+                    </tr>
+                    <?php
+                        $user = 'root';
+                        $pass = '';
+                        $db = 'e_tinda';
+                       // $storename = 'basaan ni ethan';
+                        $db = new mysqli('localhost', $user, $pass, $db) or die("Unable to connect");
+                        $sql = "select itemName, stock, capital, sellingPrice, dateModified from `$storename`";
+                        $result = $db->query($sql);
+
+
+                        if($result->num_rows >0){
+                            while($row = $result->fetch_assoc()){
+                            echo '<tr><td><center>' .$row["itemName"]. '</center></td>';
+                            echo '<td><center>' .$row["stock"]. '</center></td>';
+                            echo '<td><center><div contenteditable>' .$row["capital"]. '</div></center></td>';
+                            echo '<td><center><div contenteditable>' .$row["sellingPrice"]. '</div> </center></td>';
+                            echo '<td><center>' .$row["dateModified"]. '</center></td>';
+                            }
+                        }
+                    ?>
+                </table>
+                
+                
+                </div>
                 <div id="poscontainer">
                     <div id="pos" >
                         <div id="mainpos"></div>
