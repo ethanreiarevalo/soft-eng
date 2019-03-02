@@ -4,6 +4,9 @@ session_start();
 $username = $_SESSION['username'];
 $password = $_SESSION['password'];
 $storename = $_SESSION['store_name'];
+$email=$_SESSION['email'];
+$fname=$_SESSION['first_name'];
+$lname=$_SESSION['last_name'];
 ?>
 <!DOCTYPE HTML>
 <html>

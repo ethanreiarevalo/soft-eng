@@ -28,8 +28,8 @@ $lname = $_SESSION['last_name'];
                     $_SESSION['password'] = $pass;
                     $_SESSION['store_name'] = $storename;
                     $_SESSION['email']=$email;
-                    $_SESSION['fname']=$fname;
-                    $_SESSION['lname']=$lname;
+                    $_SESSION['first_name']=$fname;
+                    $_SESSION['last_name']=$lname;
                     ?>
                     <a href="Inventory.php">Inventory</a></form></li>
                     <li> | </li>
