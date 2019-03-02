@@ -16,7 +16,7 @@ $result = $con->query("INSERT INTO `t_account` VALUES ('$username','$email','$st
 '$fname','$lname')");
 
 $sql = "CREATE TABLE IF NOT EXISTS `$storename` (
-  storeid INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+  itemid INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
   itemName VARCHAR(30) NOT NULL,
   stock int(10) NOT NULL,
   capital float(10),

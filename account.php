@@ -23,7 +23,11 @@ $lname = $_SESSION['last_name'];
             <div id="logo"></div>
             <div id="links">
                 <ul>
-                    <li><a href="Inventory.php">Inventory</a></li>
+                    <li><form action="inventory.php" method="post">
+                    <?php $_SESSION['username'] = $username;
+                    $_SESSION['password'] = $pass;
+                    $_SESSION['store_name'] = $storename;?>
+                    <a href="Inventory.php">Inventory</a></form></li>
                     <li> | </li>
                     <li><a href="pos.php">POS</a></li>
                     <li> | </li>
