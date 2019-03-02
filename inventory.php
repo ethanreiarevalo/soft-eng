@@ -29,22 +29,22 @@ $lname=$_SESSION['last_name'];
                 
             </div>
             <div id="StoreName">
-                <label>STORENAME HERE</label>
+                <label><?php echo$storename;?></label>
             </div>
             <div id="TableInventory">
                 <center>
                     <form action="inventoryprocess.php" id="insert" method="post">
                     <label>ITEM NAME</label><br>
-                    <input type="text" id="ItemName" value="Uneditable" name="itemname"/><br><br>
+                    <input type="text" id="ItemName" value="" name="itemname"/><br><br>
                     <label>NUMBER IN STOCK</label><br>
-                    <input type="text" id="NumberInStock" value="Uneditable" name="numberinstock"/><br><br>
+                    <input type="text" id="NumberInStock" value="" name="numberinstock"/><br><br>
                     <label>CAPITAL</label><br>
-                    <input type="text" id="CapitalBox" value="Enter Text" name="capital"/><br><br>
+                    <input type="text" id="CapitalBox" value="" name="capital"/><br><br>
                     <label>SELLING PRICE </label><br>
-                    <input type="text" id="SellingPriceBox" value="Enter Text" name="sellingprice"/><br><br>
+                    <input type="text" id="SellingPriceBox" value="" name="sellingprice"/><br><br>
                     <label>DATE MODIFIED</label><br>
-                    <input type="text" id="DateModified" value="Uneditable" name="datemodified"/><br><br>
-                    <button type="submit" value="Insert">ADD</button>
+                    <input type="text" id="DateModified" value="" name="datemodified"/><br><br>
+                    <button type="submit" value="Insert" name="insert">ADD</button>
                     </form>
                     
                 </center>
