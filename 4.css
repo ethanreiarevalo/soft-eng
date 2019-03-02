@@ -66,10 +66,23 @@ a{
     width: 100%;
     height: 55vh;
     margin-top: 4.7%;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 input{
     display: block;
+    margin:5%;
+    padding: 3%;
+    width: 80%;
+}
+#Show{
+    background-color: red;
+}
+#label{
+    margin-left: 10%;
+    margin-top: 10%;
+}
+label{
+    margin: 5%;
 }
 

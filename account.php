@@ -42,10 +42,12 @@ $lname = $_SESSION['last_name'];
            </center>
            <div id="info">
                <div id="Show">
-                    <label for="" style = "display:block;"> User Name:<br/><?php echo $username;?></label>
+                   <div id="label">
+                   <label for="" style = "display:block;"> User Name:<br/><?php echo $username;?></label>
                     <label for="" style = "display:block;"> Password:<br/><?php echo $pass;?></label>
                     <label for="" style = "display:block;"> Your Name:<br/><?php echo $fname; echo ' '; echo $lname;?></label>
                     <label for="" style = "display:block;"> Email Address:<br/><?php echo $email;?></label>
+                </div>    
                </div>
 
                <div id="Editable">
@@ -54,7 +56,7 @@ $lname = $_SESSION['last_name'];
                        <input type="text" placeholder="Change Username" name="userName">
                        <input type="text" placeholder="Change password" name="passWord">
                        <input type="text" placeholder="Change Email" name="eMail">
-                       <button type="submit" value="update" name="Update">Save</button>
+                       <button type="submit" value="update" name="Update">Save Changes</button>
                    </form>
                </div>
                
