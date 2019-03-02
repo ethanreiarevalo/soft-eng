@@ -24,6 +24,7 @@ VALUES (null, '$itemname', '$numberinstock', '$capital', '$sellingprice', '$date
 
 if (mysqli_query($conn, $sql)) {
     echo "New record created successfully";
+    header("refresh:0;url=inventory.php");
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
