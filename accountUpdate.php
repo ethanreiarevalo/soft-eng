@@ -16,7 +16,7 @@ if (mysqli_query($con, $sql)) {
     $_SESSION['username'] = $username;
     $_SESSION['password'] = $password;
     $_SESSION['email'] = $email;
-    header("refresh:5;url=account.php");
+    header("refresh:0;url=account.php");
  } else {
     echo "Error updating record: " . mysqli_error($con);
  }

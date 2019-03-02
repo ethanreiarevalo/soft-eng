@@ -79,7 +79,7 @@ $storename = $_SESSION['store_name'];
                             echo '<tr><td><center>' .$row["itemName"]. '</center></td>';
                             echo '<td><center>' .$row["stock"]. '</center></td>';
                             echo '<td><center><div contenteditable>' .$row["capital"]. '</div></center></td>';
-                            echo '<td><center>' .$row["sellingPrice"]. '</center></td>';
+                            echo '<td><center><div contenteditable>' .$row["sellingPrice"]. '</div> </center></td>';
                             echo '<td><center>' .$row["dateModified"]. '</center></td>';
                             echo '<td><center><button>ADD</button></center></td></center></td>';
                             echo '<td><center><button>UPDATE</button></center></td></center></td></tr>';
