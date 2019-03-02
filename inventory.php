@@ -1,25 +1,4 @@
-<?php
-$user = 'root';
-$pass = '';
-$db = 'e_tinda';
 
-$db = mysqli_connect('localhost', $user, $pass, $db) or die("Unable to connect");
-
-$sql = "select studentnum,name,course,year from student";
-$result = $db->query($sql);
-
-
-
-if($result->num_rows >0){
-    while($row = $result->fetch_assoc()){
-       echo '<tr><td><center>' .$row["studentnum"]. '</center></td>';
-       echo '<td><center>' .$row["name"]. '</center></td>';
-       echo '<td><center>' .$row["course"]. '</center></td>';
-       echo '<td><center>' .$row["year"]. '</center></td>';
-       echo '<td><center> EDIT | DELETE </center></td></tr>';
-    }
-}
-?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -80,31 +59,25 @@ if($result->num_rows >0){
                         <th>Update Item</th>
                     </tr>
                     <tr>
-                        <td>Catsup</td>
-                        <td>20</td> 
-                        <td>18.75</td>
-                        <td>20.00</td>
-                        <td><center>2-23-2019</center></td>
-                        <td><center><button>ADD</button></center></td>
-                        <td><center><button>UPDATE</button></center></td>
-                    </tr>
-                    <tr>
-                        <td>Shampoo</td>
-                        <td>24</td> 
-                        <td>5.50</td>
-                        <td>6.00</td>
-                        <td><center>2-23-2019</center></td>
-                        <td><center><button>ADD</button></center></td>
-                        <td><center><button>UPDATE</button></center></td>
-                    </tr>
-                    <tr>
-                        <td>Eggs</td>
-                        <td>60</td> 
-                        <td>6.00</td>
-                        <td>6.50</td>
-                        <td><center>2-23-2019</center></td>
-                        <td><center><button>ADD</button></center></td>
-                        <td><center><button>UPDATE</button></center></td>
+                    <?php
+                        $user = 'root';
+                        $pass = '';
+                        $db = 'e_tinda';
+                        $db = mysqli_connect('localhost', $user, $pass, $db) or die("Unable to connect");
+                        $sql = "select itemname,numberinstock,capital,sellingprice, datemodified from t_account";
+                        $result = $db->query($sql);
+                        if($result->num_rows >0){
+                            while($row = $result->fetch_assoc()){
+                            echo '<tr><td><center>' .$row["itemname"]. '</center></td>';
+                            echo '<td><center>' .$row["numberinstock"]. '</center></td>';
+                            echo '<td><center>' .$row["capital"]. '</center></td>';
+                            echo '<td><center>' .$row["sellingprice"]. '</center></td>';
+                            echo '<td><center>' .$row["datemodified"]. '</center></td>';
+                            echo '<td><center><button>ADD</button></center></td></center></td></tr>';
+                            echo '<td><center><button>UPDATE</button></center></td></center></td></tr>';
+                            }
+                        }
+                    ?>
                     </tr>
                 </table>
             </div>
