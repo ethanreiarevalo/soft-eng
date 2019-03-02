@@ -32,13 +32,24 @@ html body{
 #imageheader{
     background-color: blanchedalmond;
     display: flex;
+    justify-content: center;
+}
+#both{
+    width: 202px;
+    height: 30vh;
+    
+    margin-top: 5%;
+
 }
 #image{
     border:1px solid blue;
-    width: 28%;
-    height: 30vh;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    margin-bottom: 3%;
+    margin-bottom: 0%;
+}
+#titleheader{
+    margin: 0%;
 }
 #info{
     
@@ -91,7 +102,10 @@ button{
     background-color:rgb(68, 68, 68); 
     border:none;
 }
-
+ul{
+    float: right;
+    margin-right: 5%;
+}
 li{
     color:white;
     display: inline-block;

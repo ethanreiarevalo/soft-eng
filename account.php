@@ -45,10 +45,15 @@ $lname = $_SESSION['last_name'];
             <div id="content">
                 
                 <div id="imageheader">
-                    <div id="image" ></div><br/>
-                    <h1 name="storename" >  
-                        <?php echo $storename;?>
-                    </h1>
+                    <div id="both">
+                        <div id="image" ></div><br/>
+                        <center>
+                        <h4 id ="titleheader" name="storename" >  
+                            <?php echo $storename;?>
+                        </h4>
+                        </center>
+                    </div>
+                    
                 </div>
                 
                 <div id="info">
