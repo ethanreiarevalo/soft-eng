@@ -1,88 +1,56 @@
-html, body{
-    margin: 0;
-    padding: 0;
+html body{
+    margin: 0%;
+    padding: 0%;
+    height: 100vh;
     width: 100%;
-    height: 100vh;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 #bodycontainer{
-    margin: 0;
-    padding: 0;
+    margin: 0%;
+    padding: 0%;
+    height: 100vh;
+    width: 100%;
     display: grid;
-    grid-template-columns: 25% 75%;
-}
-#menu{
-    background-color: rgb(43, 41, 41);
-    height: 100vh;
-}
-#accountsec{
-    
-    height: 100vh;
-}
-li{
-    list-style-type: none;
-    padding: 3%;
-    padding-top: 5%;
-}
-a{
-    text-decoration: none;
-    color: white;
+    grid-template-rows: 7vh 93vh;
+    background-color: rgb(228, 245, 250);
 }
 #navigator{
-    margin-top: 20%;
+    background-color:black;
 }
-#block{
-   
-    padding-top: 4%;
-    padding-bottom: 4%;
-    padding-left: 10%;
+#main{
+    display: flex;
+    justify-content: center;
 }
-#block:hover{
-    background-color: seagreen;
-    padding-top: 4%;
-    padding-bottom: 4%;
+#content{
+    overflow-y: scroll;
+    width: 60%;
+    border-right: 1px solid rgb(136, 136, 236);
+    border-left: 1px solid rgb(136, 136, 236);
+    display: grid;
+    grid-template-rows: 40vh;
 }
-#logo{
-    margin-top: 10%;
-    background-image: url("logo/logo.png");
-    width: 100%;
-    height: 30vh;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+#imageheader{
+    background-color: blanchedalmond;
+    display: flex;
 }
 #image{
-    background-color: blue;
+    border:1px solid blue;
+    width: 28%;
     height: 30vh;
-    width: 20%;
     border-radius: 50%;
-}
-#image{
-    margin-top: 5%;
+    margin-bottom: 3%;
 }
 #info{
-    background-color: chartreuse;
-    width: 100%;
-    height: 55vh;
-    margin-top: 4.7%;
+    
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 49.9% .2% 49.9%;
 }
-input{
-    display: block;
-    margin:5%;
-    padding: 3%;
-    width: 80%;
+#vr{
+    background-color: aqua;
 }
-#Show{
-    background-color: red;
+
+li{
+    color:white;
+    display: inline-block;
 }
-#label{
-    margin-left: 10%;
-    margin-top: 10%;
-}
-label{
-    margin: 5%;
-}
+
 
