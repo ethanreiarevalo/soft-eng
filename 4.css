@@ -3,6 +3,7 @@ html body{
     padding: 0%;
     height: 100vh;
     width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #bodycontainer{
     margin: 0%;
@@ -42,15 +43,52 @@ html body{
 #info{
     
     display: grid;
-    grid-template-columns: 49.9% .2% 49.9%;
+    grid-template-columns: 50% 50%;
 }
 #vr{
     background-color: aqua;
+}
+#show{
+    display: flex;
+    justify-content: center;
+}
+#label, form{
+    border: 1px solid black;
+    border-radius: 5%;
+    height: 50vh;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    width: 90%;
+}
+form{
+    height: 45vh;
+}
+label, h5{
+    margin-left:5%;
+}
+
+input{
+    display: block;
+    width: 80%;
+    margin:auto;
+    padding: 3%;
+    margin: 5%;
+}
+button{
+    display: block;
+    width: 87%;
+    margin:auto;
+    padding: 3%;
+    margin: 5%;
 }
 
 li{
     color:white;
     display: inline-block;
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
 }
 
 

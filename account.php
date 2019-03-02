@@ -46,6 +46,7 @@ $lname = $_SESSION['last_name'];
                 <div id="info">
                     <div id="show">
                         <div id="label">
+                            <center><h4>Your Profile</h4></center>
                             <h5>Username</h5>
                             <label for="" style = "display:block;"><?php echo $username;?></label>
                             <h5>Password</h5>
@@ -56,15 +57,17 @@ $lname = $_SESSION['last_name'];
                             <label for="" style = "display:block;"><?php echo $email;?></label>
                         </div>
                     </div>
-                    <div id = "vr"></div>
+                    
                     <div id="edit">
                         <form action="accountUpdate.php" method="post" >
+                            <center><h4>Edit Profile</h4></center>
                             <?php $_SESSION['storename'] = $storename;?>
                             <input type="text" placeholder="Change Username" name="userName">
                             <input type="text" placeholder="Change password" name="passWord">
                             <input type="text" placeholder="Change Email" name="eMail">
                             <button type="submit" value="update" name="Update">Save Changes</button>
-                        </form> 
+                        </form>
+
                     </div>
                 </div>
 
