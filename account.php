@@ -21,6 +21,7 @@ $lname = $_SESSION['last_name'];
     <div id="bodycontainer">
         <div id="navigator">
             <div id="logo"></div>
+            <h4 id="name">E-Tinda</h4>
             <div id="links">
                 <ul>
                     <li><form action="inventory.php" method="post">
