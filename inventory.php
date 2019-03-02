@@ -1,4 +1,10 @@
+<?php
+session_start();
 
+$username = $_SESSION['username'];
+$password = $_SESSION['password'];
+$storename = $_SESSION['store_name'];
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -24,7 +30,7 @@
             </div>
             <div id="TableInventory">
                 <center>
-                    <form action="" method="post">
+                    <form action="inventoryprocess.php" id="insert" method="post">
                     <label>ITEM NAME</label><br>
                     <input type="text" id="ItemName" value="Uneditable" name="itemname"/><br><br>
                     <label>NUMBER IN STOCK</label><br>
@@ -58,27 +64,28 @@
                         <th>Add Stock</th>
                         <th>Update Item</th>
                     </tr>
-                    <tr>
                     <?php
                         $user = 'root';
                         $pass = '';
                         $db = 'e_tinda';
-                        $db = mysqli_connect('localhost', $user, $pass, $db) or die("Unable to connect");
-                        $sql = "select itemname,numberinstock,capital,sellingprice, datemodified from t_account";
+                       // $storename = 'basaan ni ethan';
+                        $db = new mysqli('localhost', $user, $pass, $db) or die("Unable to connect");
+                        $sql = "select itemName, stock, capital, sellingPrice, dateModified from `$storename`";
                         $result = $db->query($sql);
+
+
                         if($result->num_rows >0){
                             while($row = $result->fetch_assoc()){
-                            echo '<tr><td><center>' .$row["itemname"]. '</center></td>';
-                            echo '<td><center>' .$row["numberinstock"]. '</center></td>';
-                            echo '<td><center>' .$row["capital"]. '</center></td>';
-                            echo '<td><center>' .$row["sellingprice"]. '</center></td>';
-                            echo '<td><center>' .$row["datemodified"]. '</center></td>';
-                            echo '<td><center><button>ADD</button></center></td></center></td></tr>';
+                            echo '<tr><td><center>' .$row["itemName"]. '</center></td>';
+                            echo '<td><center>' .$row["stock"]. '</center></td>';
+                            echo '<td><center><div contenteditable>' .$row["capital"]. '</div></center></td>';
+                            echo '<td><center>' .$row["sellingPrice"]. '</center></td>';
+                            echo '<td><center>' .$row["dateModified"]. '</center></td>';
+                            echo '<td><center><button>ADD</button></center></td></center></td>';
                             echo '<td><center><button>UPDATE</button></center></td></center></td></tr>';
                             }
                         }
                     ?>
-                    </tr>
                 </table>
             </div>
             <div id="selections">
