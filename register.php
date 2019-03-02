@@ -15,8 +15,8 @@ $con = mysqli_connect($mysql_host, $mysql_user, $mysql_pass, "e_tinda") ;
 $result = $con->query("INSERT INTO `t_account` VALUES ('$username','$email','$storename','$pass',
 '$fname','$lname')");
 
-$sql = "CREATE TABLE if not exists $storename (
-  id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+$sql = "CREATE TABLE IF NOT EXISTS `$storename` (
+  storeid INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
   itemName VARCHAR(30) NOT NULL,
   stock int(10) NOT NULL,
   capital float(10),
