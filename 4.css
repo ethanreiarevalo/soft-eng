@@ -12,7 +12,7 @@ html body{
     width: 100%;
     display: grid;
     grid-template-rows: 7vh 93vh;
-    background-color: rgb(228, 245, 250);
+    background-image: linear-gradient(to right top, #3b4f3c, #446248, #4d7754, #558c61, #5da16e, #60b075, #63bf7d, #65ce84, #64d986, #62e487, #61f088, #5ffb89);
 }
 #navigator{
     background-color:black;
@@ -49,22 +49,29 @@ html body{
     background-color: aqua;
 }
 #show{
-    display: flex;
-    justify-content: center;
+   display: flex;
+   justify-content: center;
 }
 #label, #form_{
-    border: 1px solid black;
+    border: 1px solid ghostwhite;
+    background-color: ghostwhite;
     border-radius: 5%;
-    height: 50vh;
+    height: 65vh;
     margin-bottom: 5%;
+    margin-left: 5%;
     margin-top: 5%;
     width: 90%;
 }
 #form_{
-    height: 45vh;
+    height: 50vh;
 }
-label, h5{
+#title{
     margin-left:5%;
+    margin-top: 15%;
+    margin-bottom: 5%;
+}
+label{
+    margin-left: 10%;
 }
 
 input{
@@ -80,6 +87,9 @@ button{
     margin:auto;
     padding: 3%;
     margin: 5%;
+    color:white; 
+    background-color:rgb(68, 68, 68); 
+    border:none;
 }
 
 li{
@@ -89,6 +99,16 @@ li{
 }
 a{
     text-decoration: none;
+}
+#report{
+    border: 1px solid black;
+    border-radius: 5%;
+    height: 20vh;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-top: 5%;
+    width: 90%;
+
 }
 
 

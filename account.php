@@ -51,26 +51,39 @@ $lname = $_SESSION['last_name'];
                     <div id="show">
                         <div id="label">
                             <center><h4>Your Profile</h4></center>
-                            <h5>Username</h5>
+                            <hr><hr>
+                            <label id="title">Username</label>
                             <label for="" style = "display:block;"><?php echo $username;?></label>
-                            <h5>Password</h5>
+                            <hr>
+                            <label id="title">Password</label>
                             <label for="" style = "display:block;"><?php echo $pass;?></label>
-                            <h5>Name</h5>
+                            <hr>
+                            <label id="title">Name</label>
                             <label for="" style = "display:block;"><?php echo $fname; echo ' '; echo $lname;?></label>
-                            <h5>Email</h5>
+                            <hr>
+                            <label id="title">Email</label>
                             <label for="" style = "display:block;"><?php echo $email;?></label>
+                            <hr>
+                            <button style = "color:white; background-color:red; border:none;">Delete Your Account</button>
                         </div>
+                        
                     </div>
                     
                     <div id="edit">
                         <form action="accountUpdate.php" method="post" id = "form_">
                             <center><h4>Edit Profile</h4></center>
+                            <hr><hr>
                             <?php $_SESSION['storename'] = $storename;?>
                             <input type="text" placeholder="Change Username" name="userName">
                             <input type="text" placeholder="Change password" name="passWord">
                             <input type="text" placeholder="Change Email" name="eMail">
                             <button type="submit" value="update" name="Update">Save Changes</button>
                         </form>
+
+                        <div id="report">
+                            <center><h4>Report Bugs</h4></center>
+                            <hr><hr>
+                        </div>
 
                     </div>
                 </div>
