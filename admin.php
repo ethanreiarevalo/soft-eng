@@ -20,14 +20,18 @@ $lname = $_SESSION['last_name'];
 <body>
     <div id="bodycontainer">
         <div id=navigator>
-            <div id="welcome">Welcome <?php echo $fname; echo" "; echo "$lname";?></div>
+            <div id="welcome">Welcome <?php echo $fname; echo" "; echo "$lname";?> !</div>
             <ul>
                 <li><a href="index.php" action="logout.php" method = "post">Logout</a></li>
             </ul>
         </div>
 
         <div id="tablecontainer">
+            
+            
             <div id="table">
+            <h4 style="">E-Tinda Clients</h4>
+            <hr>
                 <table>
                 <tr>
                     <th>Username</th>
@@ -35,6 +39,7 @@ $lname = $_SESSION['last_name'];
                     <th>Email</th>
                     <th>store Name</th>
                     <th>Name</th>
+                    <th>Delete</th>
                 </tr>
                 <?php
                         $user = 'root';
@@ -43,7 +48,7 @@ $lname = $_SESSION['last_name'];
                         $type = 'type';
                       
                         $db = new mysqli('localhost', $user, $pass, $db) or die("Unable to connect");
-                        $sql = "SELECT 'username','email'.'store_name','userpassword','first_name','last_name' from t_account where $type = 'client'";
+                        $sql = "SELECT username, email, store_name, userpassword, first_name, last_name from t_account where $type = 'client'";
                         $result = $db->query($sql);
 
 
@@ -53,8 +58,8 @@ $lname = $_SESSION['last_name'];
                             echo '<td><center>' .$row["email"]. '</center></td>';
                             echo '<td><center>' .$row["store_name"]. '</center></td>';
                             echo '<td><center>' .$row["userpassword"]. '</center></td>';
-                            echo '<td><center>' .$row["first_name"] + $row["last_name"]. '</center></td>';
-                            echo '<td><center><button>DELETE</button></center></td></center></td></tr>';
+                            echo '<td><center>' .$row["first_name"]." ".$row['last_name']. '</center></td>';
+                            echo '<td><center><button>DELETE</button></center></td></tr>';
                             }
                         }
                     ?>
