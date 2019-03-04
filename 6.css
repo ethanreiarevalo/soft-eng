@@ -1,0 +1,40 @@
+html body{
+    margin: 0%;
+    padding: 0%;
+    height: 100vh;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#bodycontainer{
+    margin: 0%;
+    padding: 0%;
+    background-color: bisque;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 7vh 93vh;
+}
+#navigator{
+    background-color:rgb(54, 52, 52);
+    color: ghostwhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#tablecontainer{
+    background-color: aquamarine;
+}
+#welcome{
+    margin-right:10%;
+}
+ul{
+    margin-left: 10%;
+
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
