@@ -35,9 +35,9 @@ $lname = $_SESSION['last_name'];
                 <table>
                 <tr>
                     <th>Username</th>
-                    <th>Password</th>
+                    <th>Store Name</th>
                     <th>Email</th>
-                    <th>store Name</th>
+                    <th>Password</th>
                     <th>Name</th>
                     <th>Delete</th>
                 </tr>
