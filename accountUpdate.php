@@ -11,7 +11,6 @@ $mysql_pass = '';
 $mysql_db = 'e_tinda';
 $con = mysqli_connect($mysql_host, $mysql_user, $mysql_pass, "e_tinda") ;
 $sql =  "Update t_account set username = '$username', userpassword = '$password', email = '$email' where store_name = '$storename'";
-$sqlu = "Update t_account set userpassword = '$password', email = '$email' where store_name = '$storename'";
 
 
 if (mysqli_query($con, $sql)) {
