@@ -73,7 +73,7 @@ $lname=$_SESSION['last_name'];
                         $db = 'e_tinda';
                        // $storename = 'basaan ni ethan';
                         $db = new mysqli('localhost', $user, $pass, $db) or die("Unable to connect");
-                        $sql = "select itemName, stock, capital, sellingPrice, dateModified from `$storename`";
+                        $sql = "select itemid,itemName, stock, capital, sellingPrice, dateModified from `$storename`";
                         $result = $db->query($sql);
 
 
@@ -84,7 +84,8 @@ $lname=$_SESSION['last_name'];
                             echo '<td><center><div contenteditable>' .$row["capital"]. '</div></center></td>';
                             echo '<td><center><div contenteditable>' .$row["sellingPrice"]. '</div> </center></td>';
                             echo '<td><center>' .$row["dateModified"]. '</center></td>';
-                            echo '<td><center><button>ADD</button></center></td></center></td>';
+                            echo "<td><a href=\"addItemStock.php?id=".$row['itemid']."\">ADD</a></td>";
+                            // echo '<td><center><button>ADD</button></center></td></center></td>';
                             echo '<td><center><button>UPDATE</button></center></td></center></td></tr>';
                             }
                         }

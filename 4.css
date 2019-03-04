@@ -64,6 +64,10 @@ html body{
     height: 200px;
     border-radius: 50%;
     margin-bottom: 0%;
+    background-image: url("icons/account-default-image.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 #titleheader{
     margin: 0%;
