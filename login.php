@@ -16,7 +16,7 @@ $sql = "SELECT * FROM t_account where username='$username' && userpassword='$pas
 $result = mysqli_query($conn,$sql);
 $row = mysqli_fetch_array($result);
 
-    if($row["username"] == $username && $row["userpassword"] == $password){
+    if($row["username"] == $username && $row["userpassword"] == $password && $row["type"] == "client"){
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
         $storename = $row["store_name"];
@@ -28,8 +28,8 @@ $row = mysqli_fetch_array($result);
         $_SESSION['last_name'] = $lname;
         $_SESSION['email'] = $email;
         header("location:account.php");
-    }else{
-        echo"Login Unsuccessful";
+    }else if($row["username"] == $username && $row["userpassword"] == $password && $row["type"] == "admin"){
+        header("location:admin.php");
     }
 
 mysqli_close($conn);

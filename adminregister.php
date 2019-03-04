@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" media="screen" href="3.css" />
-    <title>Document</title>
+    <title>Register as an Admin</title>
 </head>
 <body>
     <div id="bodycontainer">
@@ -23,9 +23,9 @@
             <center>
                     <h1 style="margin-top: 6%;">Become an  Admin!</h1>
                     <div id="inputcontainer">
-                        <form action="" method="post">
-                                <input type="text" placeholder="firstname" name="firstname">
-                                <input type="text" placeholder="lastname" name="lastname">
+                        <form action="adminprocess.php" method="post">
+                                <input type="text" placeholder="firstname" name="first_name">
+                                <input type="text" placeholder="lastname" name="last_name">
                                 <input type="text" placeholder="email address" name="email">
                                 <input type="text" placeholder="username" name="username">
                                 <input type="password" placeholder="password" name="password">
