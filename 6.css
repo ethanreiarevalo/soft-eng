@@ -28,17 +28,20 @@ html body{
 }
 #table{
     height: 50vh;
-    width: 50%;
+    width: 55%;
    
 }
 table{
+   
+    height: 20vh;
     overflow: scroll;
 }
 th{
     background-color: slategrey;
-    padding: 2%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
     border-radius: 5%;
-    width: 22%;
+    width:20%;
 }
 tr{
     background-color: rgb(230, 226, 222);
