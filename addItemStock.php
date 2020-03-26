@@ -11,7 +11,7 @@ if (mysqli_connect_errno()) {
 echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 $itemname = $_POST['rowName'];
-$sql = "UPDATE $storename SET stock = stock+1 WHERE itemName= `$itemname`";
+$sql = "UPDATE `$storename` SET stock = stock+1, dateModified = CURDATE() WHERE itemName= `$itemname`";
 
 // $id = $_GET['itemid']; // $id is now defined
 
